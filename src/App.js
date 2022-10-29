@@ -1,11 +1,19 @@
-import React from "react";
-import "./style.css";
+import React from 'react';
+import './style.css';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+
+import Form from './Components/Form.js';
 
 export default function App() {
   return (
     <div>
-      <h1>Hello StackBlitz!</h1>
-      <p>Start editing to see some magic happen :)</p>
+      <Router>
+        <Switch>
+          <Route exact path="/Form">
+            <Form />
+          </Route>
+        </Switch>
+      </Router>
     </div>
   );
 }
